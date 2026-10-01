@@ -1,387 +1,1446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Padala Sai Bhargavi | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init('dc2Ta8oeyJcYgkZ0u');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Padala Sai Bhargavi | Portfolio</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Padala Sai Bhargavi - Information Technology student and software developer."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init('dc2Ta8oeyJcYgkZ0u');
+    </script>
 </head>
+
 <body>
 
-  <!-- ===== LOADING SCREEN ===== -->
-  <div id="loader">
-    <div class="loader-content">
-      <div class="loader-ring"></div>
-      <p class="loader-text">Loading...</p>
+    <!-- ================= LOADER ================= -->
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
     </div>
-  </div>
 
-  <!-- ===== PARTICLES BACKGROUND ===== -->
-  <canvas id="particles-canvas"></canvas>
 
-  <!-- ===== SCROLL TO TOP ===== -->
-  <button id="scroll-top" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+    <!-- ================= PARTICLES ================= -->
 
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">PSB<span class="dot">.</span></a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about"      class="nav-link">About</a></li>
-        <li><a href="#skills"     class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects"   class="nav-link">Projects</a></li>
-        <li><a href="#education"  class="nav-link">Education</a></li>
-        <li><a href="#contact"    class="nav-link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    <canvas id="particles-canvas"></canvas>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section id="hero">
-    <div class="hero-container">
-      <div class="hero-text reveal">
-        <p class="hero-greeting">Hi there, I'm</p>
-        <h1 class="hero-name">Padala Sai<br /><span class="gradient-text">Bhargavi</span></h1>
-        <div class="hero-typing">
-          <span class="typing-prefix">I'm a </span>
-          <span id="typed-text" class="typed-text"></span>
-          <span class="cursor">|</span>
-        </div>
-        <p class="hero-intro">
-          Final-year B.Tech CSE student with Java expertise, building scalable web applications
-          and mobile apps. Interned at Amazon and FortiX Cyber Defence.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
-          <a href="#contact"  class="btn btn-outline">Contact Me <i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <div class="hero-image reveal">
-        <div class="profile-glow">
-          <div class="profile-ring"></div>
-          <div class="profile-placeholder">
-            <img src="final profile.jpg" alt="Padala Sai Bhargavi" class="profile-img">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-      <p>Scroll Down</p>
-    </div>
-  </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Get to know me</p>
-        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-card glass reveal">
-          <div class="about-icon"><i class="fas fa-code"></i></div>
-          <h3>Java Developer</h3>
-          <p>Strong in core Java concepts including OOPs, Collections Framework, Exception Handling, and Multithreading. Worked on production Java systems at Amazon.</p>
-        </div>
-        <div class="about-card glass reveal">
-          <div class="about-icon"><i class="fas fa-globe"></i></div>
-          <h3>Web Developer</h3>
-          <p>Built full-stack web applications using React.js, HTML5, CSS3, JavaScript, Node.js, and REST APIs. Created the official FortiX Cyber Defence website.</p>
-        </div>
-        <div class="about-card glass reveal">
-          <div class="about-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h3>Mobile App Developer</h3>
-          <p>Currently building SkillSphere, a Flutter-based mobile app with Firebase authentication and Firestore database for campus opportunity tracking.</p>
-        </div>
-        <div class="about-card glass reveal">
-          <div class="about-icon"><i class="fas fa-brain"></i></div>
-          <h3>DSA & Problem Solver</h3>
-          <p>Solid foundation in Data Structures & Algorithms, OOP principles, and Agile/Scrum methodologies. Enjoy solving complex problems with clean, efficient solutions.</p>
-        </div>
-      </div>
-      <div class="about-bio reveal">
-        <p>
-          I'm <strong>Padala Sai Bhargavi</strong>, a final-year B.Tech Computer Science & Engineering student at Shri Vishnu Engineering College for Women, Bhimavaram, with a CGPA of 8.67.
-          I've interned at Amazon working on production Java systems and at FortiX Cyber Defence building their official website. I'm passionate about learning and contributing meaningfully to team projects.
-          I combine strong Java fundamentals with modern web development skills to create scalable, user-focused applications.
-        </p>
-        <div class="about-stats">
-          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Internships</span></div>
-          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects</span></div>
-          <div class="stat"><span class="stat-num">8.67</span><span class="stat-label">CGPA</span></div>
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Languages</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- ================= SCROLL TOP ================= -->
 
-  <!-- ===== SKILLS SECTION ===== -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">What I work with</p>
-        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-      </div>
-      <div class="skills-grid">
-        <!-- Each skill card -->
-        <div class="skill-card glass reveal"><i class="fab fa-java"></i><span>Java</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-code"></i><span>C</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-html5"></i><span>HTML5</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-react"></i><span>React.js</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-plug"></i><span>REST APIs</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-database"></i><span>Firebase</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-database"></i><span>Firestore</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-database"></i><span>MySQL</span></div>
-        <div class="skill-card glass reveal"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-code"></i><span>VS Code</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-sitemap"></i><span>DSA</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-cogs"></i><span>OOP</span></div>
-        <div class="skill-card glass reveal"><i class="fas fa-project-diagram"></i><span>Agile/Scrum</span></div>
-      </div>
-    </div>
-  </section>
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <!-- ===== EXPERIENCE SECTION ===== -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Where I've worked</p>
-        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
-      </div>
-      <div class="timeline">
 
-        <!-- Experience 1 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Software Development Engineer Intern</h3>
-                <p class="timeline-company"><i class="fas fa-building"></i> Amazon</p>
-              </div>
-              <span class="timeline-date">2025</span>
-            </div>
-            <ul class="timeline-points">
-              <li>Worked on actual production Java code as part of a large distributed system.</li>
-              <li>Developed a WhatsApp notification feature for customers when payment limits are increased — feature went live and is used by real Amazon users.</li>
-              <li>Used core Java concepts like OOPs and exception handling throughout the project.</li>
-              <li>Participated in sprint cycles, code reviews, and unit testing.</li>
-              <li>Collaborated with senior engineers for architecture guidance and debugging across the system.</li>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav id="navbar">
+
+        <div class="nav-container">
+
+            <a href="#hero" class="nav-logo">
+                PSB<span class="dot">.</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="nav-link">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#experience" class="nav-link">
+                        Experience
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="nav-link">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#education" class="nav-link">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
-            <div class="timeline-tags">
-              <span>Java</span><span>OOPs</span><span>Exception Handling</span><span>Distributed Systems</span><span>Agile</span>
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-text reveal">
+
+                <p class="hero-greeting">
+                    Hi there, I'm
+                </p>
+
+                <h1 class="hero-name">
+                    Padala Sai
+                    <br>
+                    <span class="gradient-text">
+                        Bhargavi
+                    </span>
+                </h1>
+
+                <div class="hero-typing">
+
+                    <span class="typing-prefix">
+                        I'm a
+                    </span>
+
+                    <span
+                        id="typed-text"
+                        class="typed-text"
+                    ></span>
+
+                    <span class="cursor">
+                        |
+                    </span>
+
+                </div>
+
+                <p class="hero-intro">
+                    Final-year B.Tech Information Technology student
+                    passionate about software development and building
+                    practical web and AI-powered applications. I enjoy
+                    solving problems, learning new technologies, and
+                    turning ideas into useful software.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary"
+                    >
+                        View Projects
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline"
+                    >
+                        Contact Me
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </div>
+
             </div>
-          </div>
-        </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card glass">
-            <div class="timeline-header">
-              <div>
-                <h3 class="timeline-role">Web Development Intern</h3>
-                <p class="timeline-company"><i class="fas fa-building"></i> FortiX Cyber Defence</p>
-              </div>
-              <span class="timeline-date">2026</span>
+
+            <div class="hero-image reveal">
+
+                <div class="profile-glow">
+
+                    <div class="profile-ring"></div>
+
+                    <div class="profile-placeholder">
+
+                        <img
+                            src="final profile.jpg"
+                            alt="Padala Sai Bhargavi"
+                            class="profile-img"
+                        >
+
+                    </div>
+
+                </div>
+
             </div>
-            <ul class="timeline-points">
-              <li>Started with one-month training in web development before working on the actual product.</li>
-              <li>Built the complete official website for FortiX Cyber Defence using React.js, covering services like threat detection and incident response.</li>
-              <li>Took the project from scratch all the way to live deployment at fortixcyberdefence.in.</li>
-              <li>Learned about owning a piece of work end to end and shipping production-quality code.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span>React.js</span><span>Web Development</span><span>Deployment</span><span>Frontend</span>
+
+        </div>
+
+
+        <div class="scroll-indicator">
+
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
             </div>
-          </div>
+
+            <p>
+                Scroll Down
+            </p>
+
         </div>
 
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">What I've built</p>
-        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
-      </div>
-      <div class="projects-grid">
 
-        <!-- Project 1 -->
-        <div class="project-card glass reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
-            <div class="project-links">
-              <a href="https://github.com/SaiBhargavi10" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    Get to know me
+                </p>
+
+                <h2 class="section-title">
+                    About
+                    <span class="gradient-text">
+                        Me
+                    </span>
+                </h2>
+
             </div>
-          </div>
-          <h3 class="project-title">SkillSphere</h3>
-          <p class="project-desc">
-            Campus Opportunity Tracking App — A mobile app to help college students find and track opportunities like hackathons, internships, and events in one place.
-          </p>
-          <ul class="project-features">
-            <li><i class="fas fa-check"></i> Firebase Authentication with role-based login</li>
-            <li><i class="fas fa-check"></i> Firestore database for event storage</li>
-            <li><i class="fas fa-check"></i> Filter events based on eligibility criteria</li>
-            <li><i class="fas fa-check"></i> Clean, structured code architecture</li>
-          </ul>
-          <div class="project-stack">
-            <span>Flutter</span><span>Firebase</span><span>Firestore</span><span>NoSQL</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/SaiBhargavi10" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
-          </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-card glass reveal">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-globe"></i></div>
-            <div class="project-links">
-              <a href="https://fortixcyberdefence.in" target="_blank" aria-label="Live Site"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/SaiBhargavi10" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+            <div class="about-grid">
+
+
+                <!-- SOFTWARE DEVELOPMENT -->
+
+                <div class="about-card glass reveal">
+
+                    <div class="about-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <h3>
+                        Software Development
+                    </h3>
+
+                    <p>
+                        Strong foundation in programming,
+                        object-oriented programming, data structures,
+                        algorithms, and software engineering concepts.
+                    </p>
+
+                </div>
+
+
+                <!-- WEB DEVELOPMENT -->
+
+                <div class="about-card glass reveal">
+
+                    <div class="about-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Hands-on experience building responsive web
+                        applications using React.js, JavaScript,
+                        Node.js, HTML, CSS, and REST APIs.
+                    </p>
+
+                </div>
+
+
+                <!-- AI -->
+
+                <div class="about-card glass reveal">
+
+                    <div class="about-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+
+                    <h3>
+                        AI Applications
+                    </h3>
+
+                    <p>
+                        Interested in building practical AI applications
+                        using generative AI APIs and intelligent
+                        application workflows.
+                    </p>
+
+                </div>
+
+
+                <!-- PROBLEM SOLVING -->
+
+                <div class="about-card glass reveal">
+
+                    <div class="about-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Enjoy solving programming problems and
+                        continuously improving my technical skills
+                        through hands-on projects and learning.
+                    </p>
+
+                </div>
+
             </div>
-          </div>
-          <h3 class="project-title">FortiX Cyber Defence Official Website</h3>
-          <p class="project-desc">
-            Official website for a cybersecurity company covering services like threat detection and incident response. Built from scratch and deployed to production.
-          </p>
-          <ul class="project-features">
-            <li><i class="fas fa-check"></i> Responsive React.js frontend</li>
-            <li><i class="fas fa-check"></i> Service showcase and company information</li>
-            <li><i class="fas fa-check"></i> Live deployment at fortixcyberdefence.in</li>
-            <li><i class="fas fa-check"></i> End-to-end project ownership</li>
-          </ul>
-          <div class="project-stack">
-            <span>React.js</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://fortixcyberdefence.in" target="_blank" class="btn btn-sm btn-outline"><i class="fas fa-external-link-alt"></i> Live Site</a>
-            <a href="https://github.com/SaiBhargavi10" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> GitHub</a>
-          </div>
+
+
+            <div class="about-bio reveal">
+
+                <p>
+                    I'm
+                    <strong>
+                        Padala Sai Bhargavi
+                    </strong>,
+                    a final-year B.Tech Information Technology student
+                    at
+                    <strong>
+                        Shri Vishnu Engineering College for Women,
+                        Bhimavaram
+                    </strong>.
+                    I have a CGPA of
+                    <strong>
+                        8.67
+                    </strong>
+                    and internship experience at Amazon. I enjoy
+                    developing software applications, exploring
+                    emerging technologies, and building practical
+                    solutions.
+                </p>
+
+
+                <div class="about-stats">
+
+                    <div class="stat">
+
+                        <span class="stat-num">
+                            2
+                        </span>
+
+                        <span class="stat-label">
+                            Internships
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <span class="stat-num">
+                            3
+                        </span>
+
+                        <span class="stat-label">
+                            Projects
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <span class="stat-num">
+                            8.67
+                        </span>
+
+                        <span class="stat-label">
+                            CGPA
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <span class="stat-num">
+                            2027
+                        </span>
+
+                        <span class="stat-label">
+                            Graduation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== EDUCATION SECTION ===== -->
-  <section id="education">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Academic background</p>
-        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
-      </div>
-      <div class="edu-card glass reveal">
-        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-        <div class="edu-info">
-          <h3>B.Tech – Computer Science & Engineering (IT)</h3>
-          <p class="edu-college"><i class="fas fa-university"></i> Shri Vishnu Engineering College for Women, Bhimavaram</p>
-          <p class="edu-year"><i class="fas fa-calendar-alt"></i> Final Year</p>
-          <p class="edu-desc"><strong>CGPA: 8.67</strong> — Pursuing a Bachelor of Technology in Computer Science & Engineering with focus on Java, full-stack development, data structures & algorithms, and software engineering principles.</p>
-          <div class="edu-tags">
-            <span>Java</span><span>Web Development</span><span>DSA</span><span>Software Engineering</span>
-          </div>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    Technologies I work with
+                </p>
+
+                <h2 class="section-title">
+                    My
+                    <span class="gradient-text">
+                        Skills
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-code"></i>
+                    <span>C</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-react"></i>
+                    <span>React.js</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-database"></i>
+                    <span>MongoDB</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-code"></i>
+                    <span>VS Code</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Postman</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-sitemap"></i>
+                    <span>DSA</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-cubes"></i>
+                    <span>OOP</span>
+                </div>
+
+
+                <div class="skill-card glass reveal">
+                    <i class="fas fa-database"></i>
+                    <span>DBMS</span>
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-tag">Let's connect</p>
-        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
-      </div>
-      <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info reveal">
-          <p class="contact-intro">I'm open to internship and full time opportunities and collaborations. Whether you have a project idea, a question, or just want to connect — feel free to reach out!</p>
-          <div class="contact-details">
-            <a href="mailto:bhargavipadala04@gmail.com?subject=Hello%20Sai%20Bhargavi%20-%20Portfolio%20Inquiry" class="contact-item glass">
-              <i class="fas fa-envelope"></i>
-              <span>bhargavipadala04@gmail.com</span>
-            </a>
-            <a href="tel:+919441271635" class="contact-item glass">
-              <i class="fas fa-phone"></i>
-              <span>+91 9441271635</span>
-            </a>
-            <a href="https://github.com/SaiBhargavi10" target="_blank" class="contact-item glass">
-              <i class="fab fa-github"></i>
-              <span>github.com/SaiBhargavi10</span>
-            </a>
-            <a href="https://linkedin.com/in/sai-bhargavi-padala-48748b304" target="_blank" class="contact-item glass">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn Profile</span>
-            </a>
-          </div>
-          <div class="social-icons">
-            <a href="https://github.com/SaiBhargavi10" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/sai-bhargavi-padala-48748b304" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:bhargavipadala04@gmail.com?subject=Hello%20Sai%20Bhargavi%20-%20Portfolio%20Inquiry" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          </div>
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    Where I've worked
+                </p>
+
+                <h2 class="section-title">
+                    Work
+                    <span class="gradient-text">
+                        Experience
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <!-- AMAZON -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card glass">
+
+                        <div class="timeline-header">
+
+                            <div>
+
+                                <h3 class="timeline-role">
+                                    Software Development Engineer Intern
+                                </h3>
+
+                                <p class="timeline-company">
+                                    <i class="fas fa-building"></i>
+                                    Amazon
+                                </p>
+
+                            </div>
+
+                            <span class="timeline-date">
+                                May 2025 – July 2025
+                            </span>
+
+                        </div>
+
+
+                        <ul class="timeline-points">
+
+                            <li>
+                                Developed a customer-facing WhatsApp
+                                notification feature to alert customers
+                                when their order exceeded the payment
+                                limit, with a link to increase the limit.
+                            </li>
+
+                            <li>
+                                Worked on production-level software,
+                                contributing to feature implementation,
+                                testing, debugging, and code reviews.
+                            </li>
+
+                            <li>
+                                Collaborated with team members following
+                                Agile development practices to understand
+                                requirements and deliver reliable features.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="timeline-tags">
+
+                            <span>
+                                Java
+                            </span>
+
+                            <span>
+                                OOP
+                            </span>
+
+                            <span>
+                                Testing
+                            </span>
+
+                            <span>
+                                Agile
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORTIX -->
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card glass">
+
+                        <div class="timeline-header">
+
+                            <div>
+
+                                <h3 class="timeline-role">
+                                    Web Development Intern
+                                </h3>
+
+                                <p class="timeline-company">
+                                    <i class="fas fa-building"></i>
+                                    FortiX Cyber Defence
+                                </p>
+
+                            </div>
+
+                            <span class="timeline-date">
+                                2026
+                            </span>
+
+                        </div>
+
+
+                        <ul class="timeline-points">
+
+                            <li>
+                                Completed hands-on training in modern
+                                web development before working on the
+                                company's website.
+                            </li>
+
+                            <li>
+                                Developed the official FortiX Cyber
+                                Defence website using modern frontend
+                                technologies.
+                            </li>
+
+                            <li>
+                                Worked on responsive website development
+                                and presentation of the company's
+                                cybersecurity services.
+                            </li>
+
+                            <li>
+                                Contributed to the website from
+                                development through deployment.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="timeline-tags">
+
+                            <span>
+                                React.js
+                            </span>
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                            <span>
+                                HTML
+                            </span>
+
+                            <span>
+                                CSS
+                            </span>
+
+                        </div>
+                        <div class="timeline-actions">
+                          <a
+                            href="https://fortixcyberdefence.in"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn btn-sm btn-outline"
+                          >
+                              <i class="fas fa-external-link-alt"></i>
+                              Visit Website
+                          </a>
+
+                      </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <!-- Contact Form -->
-        <form class="contact-form glass reveal" id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="from_name" placeholder="John Doe" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="from_email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Hi Sai Bhargavi, I'd love to connect..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            Send Message <i class="fas fa-paper-plane"></i>
-          </button>
-          <p class="form-success" id="form-success">
-            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
-          </p>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer id="footer">
-    <div class="footer-container">
-      <p class="footer-text">Built with <span class="heart">❤️</span> by <span class="gradient-text">Padala Sai Bhargavi</span></p>
-      <p class="footer-sub">© 2026 All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    What I've built
+                </p>
+
+                <h2 class="section-title">
+                    My
+                    <span class="gradient-text">
+                        Projects
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- ================= CAREERLENS ================= -->
+
+                <div class="project-card glass reveal">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fas fa-file-circle-check"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/SaiBhargavi10/CareerLens-AI-Resume-Analyzer"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="CareerLens GitHub"
+                            >
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="project-title">
+                        CareerLens – AI Resume Analyzer
+                    </h3>
+
+
+                    <p class="project-desc">
+                        AI-powered resume analysis platform that uses
+                        Google Gemini to generate structured resume
+                        insights and personalized recommendations.
+                    </p>
+
+
+                    <ul class="project-features">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            AI-powered resume analysis
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            ATS scoring and resume insights
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Strengths, weaknesses and missing skills
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Personalized interview questions
+                        </li>
+
+                    </ul>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            React.js
+                        </span>
+
+                        <span>
+                            Vite
+                        </span>
+
+                        <span>
+                            FastAPI
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            Gemini API
+                        </span>
+
+                        <span>
+                            REST API
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/SaiBhargavi10/CareerLens-AI-Resume-Analyzer"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-sm btn-outline"
+                        >
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SMART EXPENSE TRACKER ================= -->
+
+                <div class="project-card glass reveal">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/SaiBhargavi10/SpendWise"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Smart Expense Tracker GitHub"
+                            >
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="project-title">
+                        Smart Expense Tracker with Spending Insights
+                    </h3>
+
+
+                    <p class="project-desc">
+                        Full-stack expense management application with
+                        authentication, expense tracking, budget management,
+                        and interactive spending analytics.
+                    </p>
+
+
+                    <ul class="project-features">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            JWT authentication
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Expense CRUD operations
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Filtering and budget management
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Interactive spending analytics
+                        </li>
+
+                    </ul>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            React.js
+                        </span>
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <span>
+                            Express.js
+                        </span>
+
+                        <span>
+                            SQLite
+                        </span>
+
+                        <span>
+                            JWT
+                        </span>
+
+                        <span>
+                            Recharts
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/SaiBhargavi10/SpendWise"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-sm btn-outline"
+                        >
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SKILLSPHERE ================= -->
+
+                <div class="project-card glass reveal">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-screen-button"></i>
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="project-title">
+                        SkillSphere – Campus Opportunity Tracking Platform
+                    </h3>
+
+
+                    <p class="project-desc">
+                        Mobile application designed to help students
+                        discover hackathons, internships, workshops,
+                        and technical events.
+                    </p>
+
+
+                    <ul class="project-features">
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Student opportunity discovery
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Firebase authentication
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Role-based access
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check"></i>
+                            Firestore-based event management
+                        </li>
+
+                    </ul>
+
+
+                    <div class="project-stack">
+
+                        <span>
+                            Flutter
+                        </span>
+
+                        <span>
+                            Firebase
+                        </span>
+
+                        <span>
+                            Authentication
+                        </span>
+
+                        <span>
+                            Firestore
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <span
+                            class="btn btn-sm btn-outline"
+                            style="opacity: 0.65; cursor: default;"
+                        >
+                            GitHub Coming Soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    Academic background
+                </p>
+
+                <h2 class="section-title">
+                    My
+                    <span class="gradient-text">
+                        Education
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="edu-card glass reveal">
+
+                <div class="edu-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+
+                <div class="edu-info">
+
+                    <h3>
+                        Bachelor of Technology in Information Technology
+                    </h3>
+
+                    <p class="edu-college">
+                        <i class="fas fa-university"></i>
+                        Shri Vishnu Engineering College for Women,
+                        Bhimavaram
+                    </p>
+
+                    <p class="edu-year">
+                        <i class="fas fa-calendar-alt"></i>
+                        2023 – 2027
+                    </p>
+
+                    <p class="edu-desc">
+                        <strong>
+                            CGPA: 8.67/10.00
+                        </strong>
+                        <br><br>
+                        Pursuing a Bachelor of Technology in Information
+                        Technology with interests in software development,
+                        web technologies, artificial intelligence,
+                        databases, and problem solving.
+                    </p>
+
+
+                    <div class="edu-tags">
+
+                        <span>
+                            Java
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            Web Development
+                        </span>
+
+                        <span>
+                            DSA
+                        </span>
+
+                        <span>
+                            DBMS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-header reveal">
+
+                <p class="section-tag">
+                    Let's connect
+                </p>
+
+                <h2 class="section-title">
+                    Get In
+                    <span class="gradient-text">
+                        Touch
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info reveal">
+
+                    <p class="contact-intro">
+                        I'm open to internship opportunities,
+                        full-time opportunities, collaborations,
+                        and interesting software projects.
+                        Feel free to reach out!
+                    </p>
+
+
+                    <div class="contact-details">
+
+                        <a
+                            href="mailto:bhargavipadala04@gmail.com"
+                            class="contact-item glass"
+                        >
+
+                            <i class="fas fa-envelope"></i>
+
+                            <span>
+                                bhargavipadala04@gmail.com
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/SaiBhargavi10"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-item glass"
+                        >
+
+                            <i class="fab fa-github"></i>
+
+                            <span>
+                                github.com/SaiBhargavi10
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-item glass"
+                        >
+
+                            <i class="fab fa-linkedin"></i>
+
+                            <span>
+                                LinkedIn Profile
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="social-icons">
+
+                        <a
+                            href="https://github.com/SaiBhargavi10"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+
+                        <a
+                            href="mailto:bhargavipadala04@gmail.com"
+                            aria-label="Email"
+                        >
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT FORM -->
+
+                <form
+                    class="contact-form glass reveal"
+                    id="contact-form"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="from_name"
+                            placeholder="John Doe"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="from_email"
+                            placeholder="john@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Hi Sai Bhargavi, I'd love to connect..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-full"
+                    >
+
+                        Send Message
+                        <i class="fas fa-paper-plane"></i>
+
+                    </button>
+
+
+                    <p
+                        class="form-success"
+                        id="form-success"
+                    >
+
+                        <i class="fas fa-check-circle"></i>
+
+                        Message sent! I'll get back to you soon.
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="footer">
+
+        <div class="footer-container">
+
+            <p class="footer-text">
+
+                Built by Padala Sai Bhargavi
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#hero">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
 </body>
 </html>
